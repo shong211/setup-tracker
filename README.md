@@ -1,6 +1,6 @@
 # Setup Tracker
 
-A personal checklist for setting up a new Macbook for tech work and "vibe coding". My first Next.js project — built to track the rest of my own setup, then iterated on as a way to learn TypeScript, Tailwind, and the Cursor + AI workflow.
+This is a personal checklist for setting up a new Macbook for tech work and an introduction to vibe coding. My first Next.js project - built to track the rest of my own setup, then iterated on as a way to learn TypeScript, Tailwind, and the Cursor + AI workflow.
 
 ## Stack
 - Next.js 15 (App Router)
