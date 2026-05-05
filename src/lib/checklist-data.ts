@@ -73,7 +73,6 @@ export const CHECKLIST: Category[] = [
       { id: 'pitchbook', name: 'PitchBook' },
       { id: 'cb-insights', name: 'CB Insights' },
       { id: 'crunchbase', name: 'Crunchbase Pro' },
-      { id: 'affinity', name: 'Affinity / Salesforce', description: 'GIC CRM access' },
     ],
   },
 ]

@@ -6,20 +6,20 @@ import { CHECKLIST, type ChecklistItem } from '@/lib/checklist-data'
 const STORAGE_KEY = 'setup-tracker:v1'
 
 export default function Home() {
-  const [checked, setChecked] = useState<Record<string, boolean>>({})
-  const [hydrated, setHydrated] = useState(false)
-
-  useEffect(() => {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (raw) {
-      try { setChecked(JSON.parse(raw)) } catch {}
+  const [checked, setChecked] = useState<Record<string, boolean>>(() => {
+    if (typeof window === 'undefined') return {}
+    const raw = window.localStorage.getItem(STORAGE_KEY)
+    if (!raw) return {}
+    try {
+      return JSON.parse(raw) as Record<string, boolean>
+    } catch {
+      return {}
     }
-    setHydrated(true)
-  }, [])
+  })
 
   useEffect(() => {
-    if (hydrated) localStorage.setItem(STORAGE_KEY, JSON.stringify(checked))
-  }, [checked, hydrated])
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(checked))
+  }, [checked])
 
   const toggle = (id: string) => setChecked((c) => ({ ...c, [id]: !c[id] }))
 
