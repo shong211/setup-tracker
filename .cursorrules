@@ -1,0 +1,27 @@
+# Setup Tracker — Cursor rules
+
+## Project
+Personal Mac setup checklist tracker. Single-page Next.js 15 + TypeScript + Tailwind app with localStorage persistence. No backend, no auth, no database — keep it that way unless explicitly asked.
+
+## Stack
+- Next.js 15 (App Router, src/ directory)
+- TypeScript (strict mode)
+- Tailwind CSS v4
+- pnpm
+
+## Style
+- TypeScript strict — no `any` unless commented why.
+- Tailwind utility classes only. No separate CSS files except globals.
+- One component per file. Hooks above JSX. Helper components below the main export.
+- Use 'use client' only when the component needs browser APIs or state.
+
+## Rules of engagement
+- Propose 2–3 approaches before coding when there's design ambiguity.
+- Don't add libraries unless necessary — justify any addition briefly.
+- Use conventional-commit style: feat:, fix:, refactor:, chore:.
+- After making changes, suggest the git commands to commit them.
+
+## What NOT to do
+- Don't introduce a database, API routes, or auth without being asked.
+- Don't reformat unrelated files.
+- Don't replace the existing checklist data — extend it.
